@@ -1,0 +1,6 @@
+TRUNCATE TABLE game_user RESTART IDENTITY CASCADE;
+для удаления всех значении
+
+
+
+

@@ -1,0 +1,57 @@
+TRUNCATE TABLE contacts RESTART IDENTITY;
+	•	Барлық жазбаларды өшіреді
+	•	id қайтадан 1-ден басталады
+
+
+
+
+			INSERT IN SQL
+INSERT INTO contacts (id, name, phone)
+VALUES (1, 'Aruzhan', '87071112233');
+   • SQL арқылы енгізу
+
+			UPDATE IN SQL
+UPDATE contacts
+SET name = 'Gulnaz', phone = '87071112233'
+WHERE id = 3;
+
+
+			FILTER IN SQL
+-----------------------------------------
+
+1. Найти всех с именем Aruzhan:
+SELECT * FROM contacts
+WHERE name = 'Aruzhan';
+
+2. Найти всех, у кого имя начинается с A:
+ SELECT * FROM contacts
+WHERE name ILIKE 'A%';
+
+3. Найти всех, у кого номер содержит 8777:
+SELECT * FROM contacts
+WHERE phone LIKE '%8777%';
+
+4. Найти тех, у кого id > 5:
+SELECT * FROM contacts
+WHERE id > 5;
+
+5. Сортировка по алфавиту:
+SELECT * FROM contacts
+ORDER BY name ASC;
+
+-----------------------------------------
+
+
+			DELETE IN SQL
+DELETE FROM contacts
+WHERE name = 'Aruzhan';
+
+DELETE FROM contacts
+WHERE phone = '87071112233';
+
+DELETE FROM contacts
+WHERE id = 3;
+
+       DELETE all:
+DELETE FROM contacts;
+
